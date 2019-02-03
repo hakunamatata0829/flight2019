@@ -146,10 +146,10 @@ export default withAuth(
       ) : null;
 
       return (
-       
+      
         <Grid columns='three' >
           <Grid.Column></Grid.Column>
-          <Grid.Column>
+          <Grid.Column style={{width: '100%', maxWidth: 360, textAlign:'center', margin:'0 auto'}}>
           <Segment placeholder>
             <Form onSubmit={this.handleSubmit}>
               {errorMessage}

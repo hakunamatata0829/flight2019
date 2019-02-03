@@ -7,13 +7,20 @@ import HomePage from './components/home/HomePage';
 import RegistrationForm from './components/auth/RegistrationForm';
 import config from './app.config';
 import LoginPage from './components/auth/LoginPage';
-import ProfilePage from './components/auth/ProfilePage';
+
+import AircraftPage from './components/subpage/Aircraft';
+import CrewPage from './components/subpage/Crew';
+import MaintennacePage from './components/subpage/Maintenance';
+import SalesPage from './components/subpage/Sales';
+import MovementsPage from './components/subpage/Movements';
+import ElearningPage from './components/subpage/Elearning';
+
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="wrapper">
         <Navigation />
         <main>
           <Route path='/' exact component={HomePage} />
@@ -23,7 +30,13 @@ class App extends Component {
           />
           <Route path="/implicit/callback" component={ImplicitCallback} />
           <Route path="/register" component={RegistrationForm} />
-          <SecureRoute path="/profile" component={ProfilePage} />
+          <SecureRoute path="/aircraft" component={AircraftPage} />
+          <SecureRoute path="/crew" component={CrewPage} />
+          <SecureRoute path="/maintenance" component={MaintennacePage} />
+          <SecureRoute path="/sales" component={SalesPage} />
+          <SecureRoute path="/movements" component={MovementsPage} />
+          <SecureRoute path="/elearning" component={ElearningPage} />
+         
         </main>
       </div>
     );

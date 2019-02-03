@@ -68,7 +68,7 @@ export default withAuth(
         </Menu.Menu>        
       );
       return (
-        <Menu size='large'>
+        <Menu size='large' style={{width:'100%'}}>
 
           <Menu.Item>
             <img src='https://react.semantic-ui.com/logo.png' alt="Logo"/>
