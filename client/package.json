@@ -9,6 +9,7 @@
     "@progress/kendo-react-buttons": "^2.6.1",
     "@progress/kendo-react-conversational-ui": "^2.6.1",
     "@progress/kendo-react-intl": "^2.6.1",
+    "axios": "^0.18.0",
     "bootstrap": "^4.2.1",
     "classnames": "^2.2.6",
     "contentful": "^7.1.0",

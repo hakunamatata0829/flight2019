@@ -15,6 +15,8 @@ import SalesPage from './components/subpage/Sales';
 import MovementsPage from './components/subpage/Movements';
 import ElearningPage from './components/subpage/Elearning';
 
+import AircraftEdit from './components/subpage/AircraftEdit';
+
 import './App.css';
 
 class App extends Component {
@@ -36,6 +38,7 @@ class App extends Component {
           <SecureRoute path="/sales" component={SalesPage} />
           <SecureRoute path="/movements" component={MovementsPage} />
           <SecureRoute path="/elearning" component={ElearningPage} />
+          <SecureRoute path="/aircraftcreate" component={AircraftEdit} />
          
         </main>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { Security } from '@okta/okta-react';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -23,7 +23,13 @@ ReactDOM.render(
       onAuthRequired={onAuthRequired}
     >
       <App />
+      <Switch>
+        {/* <Route exact path='/create' component={ Create } />
+        <Route path='/edit/:id' component={ Edit } />
+        <Route path='/index' component={ Index } /> */}
+    </Switch>
     </Security>
+    
   </Router>,
   document.getElementById('root')
 );

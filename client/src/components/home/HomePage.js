@@ -30,18 +30,17 @@ export default class HomePage extends React.Component{
           };
 
   componentWillMount() {
-    this.resetComponent()
+    this.resetComponent();  
   }
 
   handleItemClicked = ( name) =>{ 
       
     this.setState({ activeSideMenuItem: name });
-    console.log('Home page - ', name);
     if(name === 'Aircraft'){
-      this.setState({subMainItem: (<AircraftPage />)});
+      this.setState({subMainItem: <AircraftPage />});
     }
     if(name === 'Crew'){
-      this.setState({subMainItem: (<CrewPage />)});
+      this.setState({subMainItem: <CrewPage />});
     }
     if(name === 'Maintenance'){
       this.setState({subMainItem: (<MaintenancePage />)});
@@ -60,8 +59,7 @@ export default class HomePage extends React.Component{
 
   }
 
-  resetComponent = () => this.setState({ isLoading: false, results: [], value: '' })
-
+  resetComponent = () => this.setState({ isLoading: false, results: [], value: '' });
   handleResultSelect = (e, { result }) => this.setState({ value: result.title })
 
   handleSearchChange = (e, { value }) => {
@@ -77,14 +75,12 @@ export default class HomePage extends React.Component{
         isLoading: false,
         results: _.filter(source, isMatch),
       })
-    }, 300)
-  }
+    }, 300)  }
 
   
   render() {
      const { isLoading, value, results } = this.state;
-     let divstyle = {float:'right'};
-     
+     let divstyle = {float:'right'};     
  
     return (
       <Grid style={{margin:15,}}>
